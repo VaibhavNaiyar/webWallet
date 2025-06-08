@@ -100,34 +100,19 @@ function WalletGenerator() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4" style={{ backgroundColor: '#121212', color: '#FFFFFF' }}>
+    <div className="w-screen h-screen flex items-center justify-center p-4" style={{ backgroundColor: '#121212', color: '#FFFFFF' }}>
       <div className="w-full max-w-4xl" style={{ backgroundColor: '#1E1E1E', border: '1px solid #333', borderRadius: '12px', padding: '24px' }}>
         {/* Header */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Shield className="w-8 h-8" style={{ color: '#BB86FC' }} />
             <h1 className="text-4xl font-bold" style={{ background: 'linear-gradient(45deg, #BB86FC, #6200EE)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               HD Wallet Generator
             </h1>
           </div>
-          <p style={{ color: '#E0E0E0' }} className="text-lg">
-            Hierarchical Deterministic Cryptocurrency Wallet Generator
-          </p>
         </div>
 
-        {/* Warning Banner */}
-        <div style={{ backgroundColor: '#2D1B1B', border: '1px solid #5D4037', borderRadius: '8px' }} className="p-4 mb-8">
-          <div className="flex items-center gap-3">
-            <AlertTriangle className="w-6 h-6 flex-shrink-0" style={{ color: '#FF6B6B' }} />
-            <div>
-              <h3 className="font-semibold mb-1" style={{ color: '#FF6B6B' }}>⚠️ DEMO PURPOSES ONLY</h3>
-              <p className="text-sm" style={{ color: '#E0E0E0' }}>
-                This is a demonstration application. Never use generated keys for real cryptocurrency transactions. 
-                The cryptographic functions are simplified and NOT secure for production use.
-              </p>
-            </div>
-          </div>
-        </div>
+        
+
 
         {/* Seed Generation Section */}
         <div style={{ backgroundColor: '#1E1E1E', border: '1px solid #333', borderRadius: '8px' }} className="p-6 shadow-xl mb-8">
@@ -200,11 +185,6 @@ function WalletGenerator() {
                     <div className="font-mono" style={{ color: '#FFFFFF' }}>{word}</div>
                   </div>
                 ))}
-              </div>
-              <div style={{ backgroundColor: '#2D2416', border: '1px solid #5D4E37', borderRadius: '6px' }} className="p-3">
-                <p className="text-sm" style={{ color: '#FFD54F' }}>
-                  🔒 <strong>Keep this safe!</strong> Anyone with this phrase can access your wallet.
-                </p>
               </div>
             </div>
           )}
@@ -311,7 +291,7 @@ function WalletGenerator() {
                         )}
                         {revealedKeys.has(account.index) && (
                           <p className="text-xs mt-1" style={{ color: '#FF6B6B' }}>
-                            ⚠️ Never share your private key with anyone!
+                             Never share your private key with anyone!
                           </p>
                         )}
                       </div>
@@ -323,13 +303,6 @@ function WalletGenerator() {
           </div>
         )}
 
-        {/* Footer */}
-        <div className="text-center mt-8 p-4 text-sm" style={{ color: '#E0E0E0' }}>
-          <p>
-            This tool is for educational and demonstration purposes only. 
-            Always use proper security practices when handling real cryptocurrency.
-          </p>
-        </div>
       </div>
     </div>
   );
